@@ -3,9 +3,12 @@ Hooks.once("init", function () {
   
     CONFIG.Actor.documentClass = RuneScapeActor;
   
+    console.log("RuneScape RPG | Unregistering core...");
     Actors.unregisterSheet("core", ActorSheet);
+
+    console.log("RuneScape RPG | Registering PC Actor Sheet...");
     Actors.registerSheet("rsk", RuneScapeActorSheet, {
-      types: ["character", "hero"],
+      types: ["character"],
       label: "RuneScape Player",
       makeDefault: true,
     });
@@ -22,8 +25,9 @@ Hooks.once("init", function () {
   // Custom Sheet
   class RuneScapeActorSheet extends ActorSheet {
     static get defaultOptions() {
+      console.log("RuneScape RPG | Generating default...");
       return mergeObject(super.defaultOptions, {
-        classes: ["rsk", "sheet", "actor"],
+        classes: ["rsk", "sheet", "character", "actor"],
         template: "templates/actor-sheet.hbs",
         width: 600,
         height: 400,
