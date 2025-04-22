@@ -4,8 +4,9 @@ Hooks.once("init", function () {
     CONFIG.Actor.documentClass = RuneScapeActor;
   
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("runescape-rpg", RuneScapeActorSheet, {
+    Actors.registerSheet("rsk", RuneScapeActorSheet, {
       types: ["character"],
+      label: "RuneScape Player",
       makeDefault: true,
     });
   });
@@ -22,7 +23,7 @@ Hooks.once("init", function () {
   class RuneScapeActorSheet extends ActorSheet {
     static get defaultOptions() {
       return mergeObject(super.defaultOptions, {
-        classes: ["runescape-rpg", "sheet", "actor"],
+        classes: ["rsk", "sheet", "actor"],
         template: "templates/actor-sheet.hbs",
         width: 600,
         height: 400,
@@ -31,6 +32,7 @@ Hooks.once("init", function () {
   
     getData() {
       const data = super.getData();
+      data.Actor = this.Actor; // Ensure actor data is included in the template
       return data;
     }
   

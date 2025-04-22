@@ -6,15 +6,19 @@
   <section class="sheet-body">
     <div class="resource">
       <label>Hitpoints</label>
-      <input type="number" name="system.resources.health.value" value="{{system.attributes.hp.value}}" />
+      <input type="number" name="system.resources.health.value" value="{{actor.attributes.hp.value}}" />
     </div>
 
     <div class="skills">
-      <label>Attack</label>
-      <input type="number" name="system.resources.attack" value="{{system.skills.attack}}" />
-      <label>Strength</label>
-      <input type="number" name="system.resources.strength" value="{{system.skills.strength}}" />
-      <!-- Add more as needed -->
+<h3>Skills</h3>
+
+<!-- Loop through the Skills -->
+{{#each actor.data.templates.resources.skills as |skill skillData|}}
+  <h4>{{capitalize skill}}</h4>
+  <p>Min: {{skillData.min}}</p>
+  <p>Value: {{skillData.value}}</p>
+  <p>Max: {{skillData.max}}</p>
+{{/each}}
     </div>
   </section>
 </form>
