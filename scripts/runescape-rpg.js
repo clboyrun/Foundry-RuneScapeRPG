@@ -7,6 +7,7 @@ Hooks.once("init", function () {
     Actors.registerSheet("runescape-rpg", RuneScapeActorSheet, {
       types: ["character"],
       makeDefault: true,
+      name: "Player Character",
     });
   });
   
