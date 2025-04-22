@@ -1,0 +1,20 @@
+<form class="actor-sheet" autocomplete="off">
+  <header class="sheet-header">
+    <h1>{{actor.name}}</h1>
+  </header>
+
+  <section class="sheet-body">
+    <div class="resource">
+      <label>Hitpoints</label>
+      <input type="number" name="system.attributes.hp.value" value="{{system.attributes.hp.value}}" />
+    </div>
+
+    <div class="skills">
+      <label>Attack</label>
+      <input type="number" name="system.skills.attack" value="{{system.skills.attack}}" />
+      <label>Strength</label>
+      <input type="number" name="system.skills.strength" value="{{system.skills.strength}}" />
+      <!-- Add more as needed -->
+    </div>
+  </section>
+</form>

@@ -1,0 +1,159 @@
+{
+"Actor": {
+  "types": ["hero", "pawn", "villain"],
+  "templates": {
+    "background": {
+      "biography": "",
+      "hairColor": "blue"
+    },
+    "resources": {
+      "health": {
+        "min": 0,
+        "value": 10,
+        "max": 10
+      },
+      "skills": {
+        "archaeology": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "attack": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "cooking": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "crafting": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "defence": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "dungeoneering": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "farming": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "fishing": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "fletching": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "herblore": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "hunting": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "magic": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "mining": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "prayer": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "ranged": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "runecrafting": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "slayer": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "smithing": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "summoning": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "thieving": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        },
+        "woodcutting": {
+          "min": 1,
+          "value": 1,
+          "max": 10
+        }
+      }
+    }
+  },
+  "hero": {
+    "templates": ["background", "resources"],
+    "goodness": {
+      "value": 5,
+      "max": 10
+    }
+  },
+  "pawn": {
+    "templates": ["resources"]
+  },
+  "villain": {
+    "templates": ["background", "resources"],
+    "wickedness": {
+      "value": 5,
+      "max": 100
+    }
+  }
+},
+"Item": {
+  "types": ["weapon", "spell"],
+  "templates": {
+    "rarity": {
+      "rarity": "Common",
+      "price": 20
+    }
+  },
+  "weapon": {
+    "templates": ["rarity"],
+    "damage": 5
+  },
+  "spell": {
+    "templates": ["rarity"],
+    "cost": 2
+  }
+}
+}

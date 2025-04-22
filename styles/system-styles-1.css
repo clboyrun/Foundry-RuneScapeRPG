@@ -1,0 +1,13 @@
+.actor-sheet {
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+  }
+  
+  .sheet-header h1 {
+    font-size: 24px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .resource, .skills {
+    margin: 10px 0;
+  }
