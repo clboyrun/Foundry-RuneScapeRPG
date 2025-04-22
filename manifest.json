@@ -1,0 +1,15 @@
+{
+    "name": "rsk",
+    "title": "Runescape Kingdoms",
+    "version": "1.0.1",
+    "description": "A Foundry VTT system for the RuneScape Tabletop RPG, RuneScape Kingdoms.",
+    "author": "Astra",
+    "url": "https://github.com/YourUsername/repo-name",
+    "manifest": "https://raw.githubusercontent.com/clboyrun/Foundry-RuneScapeRPG/main/manifest.json",
+    "download": "https://github.com/clboyrun/Foundry-RuneScapeRPG/archive/refs/heads/main.zip",
+    "compatibleCoreVersion": "0.8.9",
+    "system": "rsk",
+    "dependencies": [],
+    "module": false
+  }
+  

@@ -2,7 +2,7 @@
   "id": "rsk",
   "title": "Runescape Kingdoms",
   "description": "A Foundry VTT system for the RuneScape Tabletop RPG, RuneScape Kingdoms.",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "minimumCoreVersion": "11",
   "compatibleCoreVersion": "11",
   "authors": [
@@ -38,6 +38,6 @@
   "primaryTokenAttribute": "attributes.hp",
   "url": "https://raw.githubusercontent.com/clboyrun/Foundry-RuneScapeRPG/main/system.json",
   "background": "systems/mysystem/assets/splash.webp",
-  "manifest": "https://raw.githubusercontent.com/clboyrun/Foundry-RuneScapeRPG/main/system.json",
+  "manifest": "https://raw.githubusercontent.com/clboyrun/Foundry-RuneScapeRPG/main/manifest.json",
   "download": "https://github.com/clboyrun/Foundry-RuneScapeRPG/archive/refs/heads/main.zip"
 }
