@@ -1,8 +1,6 @@
 Hooks.once("init", function () {
     console.log("RuneScape RPG | Initializing system...");
   
-    CONFIG.Actor.documentClass = RuneScapeActor;
-  
     console.log("RuneScape RPG | Unregistering core...");
     Actors.unregisterSheet("core", ActorSheet);
 
@@ -12,6 +10,8 @@ Hooks.once("init", function () {
       label: "RuneScape Player",
       makeDefault: true,
     });
+
+    CONFIG.Actor.documentClass = RuneScapeActor;
   });
   
   // Custom Actor class (basic for now)
@@ -35,12 +35,14 @@ Hooks.once("init", function () {
     }
   
     getData() {
+      console.log("RuneScape RPG | getData called");
       const data = super.getData();
       data.Actor = this.Actor; // Ensure actor data is included in the template
       return data;
     }
   
     activateListeners(html) {
+      console.log("RuneScape RPG | activateListeners called");
       super.activateListeners(html);
       // Add custom listeners here
     }
