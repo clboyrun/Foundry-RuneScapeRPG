@@ -6,7 +6,7 @@ Hooks.once("init", function () {
 
     console.log("RuneScape RPG | Registering PC Actor Sheet...");
     Actors.registerSheet("rsk", RuneScapeActorSheet, {
-      types: ["character"],
+      types: ["Player Character"],
       label: "RuneScape Player",
       makeDefault: true,
     });
