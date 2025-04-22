@@ -5,7 +5,7 @@ Hooks.once("init", function () {
   
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("rsk", RuneScapeActorSheet, {
-      types: ["character"],
+      types: ["character", "hero"],
       label: "RuneScape Player",
       makeDefault: true,
     });
