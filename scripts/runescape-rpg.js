@@ -28,7 +28,7 @@ Hooks.once("init", function () {
       console.log("RuneScape RPG | Generating default...");
       return mergeObject(super.defaultOptions, {
         classes: ["rsk", "sheet", "character", "actor"],
-        template: "templates/actor-sheet.hbs",
+        template: "systems/rsk/templates/actor-sheet.hbs",
         width: 600,
         height: 400,
       });
