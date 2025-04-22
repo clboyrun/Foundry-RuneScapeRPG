@@ -2,7 +2,7 @@
   "id": "rsk",
   "title": "Runescape Kingdoms",
   "description": "A Foundry VTT system for the RuneScape Tabletop RPG, RuneScape Kingdoms.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minimumCoreVersion": "11",
   "compatibleCoreVersion": "11",
   "authors": [
