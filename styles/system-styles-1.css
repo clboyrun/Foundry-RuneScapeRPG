@@ -53,7 +53,7 @@
 }
 
 .skill-card:hover::after {
-  content: attr(data-skill);
+  content: attr(data-skill-functions);
   position: absolute;
   background: #fff8;
   padding: 4px;

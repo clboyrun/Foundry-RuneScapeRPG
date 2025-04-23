@@ -66,11 +66,28 @@ class RuneScapeActorSheet extends ActorSheet {
   activateListeners(html) {
     console.log("RuneScape RPG | activateListeners called");
     super.activateListeners(html);
+
     // Add custom listeners here
     html.find(".skill-card").on("click", ev => {
       const skillName = ev.currentTarget.dataset.skill;
       ui.notifications.info(`Show details for ${skillName} (placeholder)`);
       // Later, open a sidebar or modal
     });
+
+    // Tab switching logic
+    html.find(".tab-buttons .tab").on("click", (event) => {
+      const selectedTab = $(event.currentTarget).data("tab");
+
+      // Set active class on tab button
+      html.find(".tab-buttons .tab").removeClass("active");
+      $(event.currentTarget).addClass("active");
+
+      // Show selected tab content, hide others
+      html.find(".tab-content").hide();
+      html.find(`.tab-content[data-tab-content="${selectedTab}"]`).show();
+    });
+
+    // Trigger the first tab by default
+    html.find(".tab-buttons .tab").first().trigger("click");
   }
 }

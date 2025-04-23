@@ -21,7 +21,8 @@
   "styles": [
     "styles/system-styles-1.css",
     "styles/system-styles-2.css",
-    "styles/inventory-style.css"
+    "styles/inventory-style.css",
+    "styles/tab-style.css"
   ],
   "packs": [
   ],

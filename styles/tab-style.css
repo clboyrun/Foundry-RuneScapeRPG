@@ -1,0 +1,46 @@
+.sheet-tabs .tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: radial-gradient(ellipse at center, #a82222 0%, #7c1313 80%, #4a0c0c 100%);
+  border-bottom: 2px solid #5a0f0f;
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.sheet-tabs .tab-buttons .tab {
+  flex: 1 1 auto;
+  background: rgba(120, 30, 30, 0.4);
+  color: #eee;
+  border-radius: 0.5rem 0.5rem 0 0;
+  border-bottom: 2px solid #5a0f0f;
+  box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.3);
+  justify-content: space-around;
+  padding: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Cinzel', serif; /* optional fantasy look */
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  width: auto;
+  display: inline-block !important;
+}
+
+.sheet-tabs .tab-buttons .tab:hover {
+  background: rgba(170, 50, 50, 0.6);
+  color: #fff;
+}
+
+.sheet-tabs .tab-buttons .tab.active {
+  background: #b02828;
+  border-color: #ff6666;
+  color: #ffffff;
+  box-shadow: 0 0 6px rgba(255, 100, 100, 0.5);
+}
+
+/* Optional font import */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');

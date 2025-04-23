@@ -3,42 +3,54 @@
     <h1>{{actor.name}}</h1>
   </header>
 
-  <section class="sheet-body">
-    <h3>Skills</h3>
-<details class="debug-section">
-  <summary>Show Debug Data</summary>
-  <pre>{{json actor.system}}</pre>
-</details>
+  <section class="sheet-tabs">
+    <nav class="tab-buttons">
+      <button type="button" class="tab" data-tab="armor">Armour</button>
+      <button type="button" class="tab" data-tab="skills">Skills</button>
+      <button type="button" class="tab" data-tab="inventory">Inventory</button>
+      <button type="button" class="tab" data-tab="about">Lore</button>
+    </nav>
+    
+    <div class="tab-content" data-tab-content="armor">
+      <h3>Armour</h3>
+      <div class="armor">
+      </div>
+    </div>
 
-<!-- Loop through the Skills -->
-    <div class="skills">
-{{#each actor.system.skills}}
-<div class="skill-card {{#if (eq this.value this.max)}}maxed{{/if}}" data-skill="{{@key}}">
-  <div class="skill-icon" style="background-image: url('systems/rsk/icons/skills/{{@key}}.png');"></div>
-  <div class="skill-info">
-    <span class="skill-name">{{capitalize @key}}</span>
-    <br />
-    <span class="skill-values">{{this.value}} / {{this.max}}</span>
-  </div>
-</div>
-{{/each}}
+    <div class="tab-content" data-tab-content="skills">
+      <h3>Skills</h3>
+      <div class="skills">
+        {{#each actor.system.skills}}
+        <div class="skill-card {{#if (eq this.value this.max)}}maxed{{/if}}" data-skill="{{@key}}">
+          <div class="skill-icon" style="background-image: url('systems/rsk/icons/skills/{{@key}}.png');"></div>
+          <div class="skill-info">
+            <span class="skill-name">{{capitalize @key}}</span><br />
+            <span class="skill-values">{{this.value}} / {{this.max}}</span>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="tab-content" data-tab-content="inventory">
+      <h3>Inventory</h3>
+      <div class="inventory-grid">
+        {{#each actor.system.inventory as |item index|}}
+          <div class="inventory-slot {{#if item}}occupied{{else}}empty{{/if}}" title="{{item.name}}">
+            {{#if item}}
+              <img src="{{item.icon}}" alt="{{item.name}}" />
+            {{else}}
+              <span class="empty-slot">+</span>
+            {{/if}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    
+    <div class="tab-content" data-tab-content="about">
+      <h3>Lore</h3>
+      <div class="about">
+      </div>
     </div>
   </section>
-
-  <section class="inventory">
-  <h3>Inventory</h3>
-
-  <div class="inventory-grid">
-    {{#each actor.system.inventory as |item index|}}
-      <div class="inventory-slot {{#if item}}occupied{{else}}empty{{/if}}" title="{{item.name}}">
-        {{#if item}}
-          <img src="{{item.icon}}" alt="{{item.name}}" />
-        {{else}}
-          <span class="empty-slot">+</span>
-        {{/if}}
-      </div>
-    {{/each}}
-  </div>
-</section>
-
 </form>

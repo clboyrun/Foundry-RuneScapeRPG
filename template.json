@@ -16,7 +16,8 @@
         "archaeology": {
           "min": 1,
           "value": 1,
-          "max": 10
+          "max": 10,
+          "functions": "How skilled are you at excavating ancient relics & artefacts.\nWhat you might know of ancient Gielinorian history.\nHow can you identify the origin and nature of a relic."
         },
         "attack": {
           "min": 1,
