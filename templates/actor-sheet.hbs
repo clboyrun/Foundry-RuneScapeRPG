@@ -5,14 +5,18 @@
 
   <section class="sheet-body">
     <div class="skills">
-<h3>Skills</h3>
-
+    <h3>Skills</h3>
 <!-- Loop through the Skills -->
-{{#each actor.system.templates.resources.skills as |skill skillData|}}
-  <h4>{{capitalize skill}}</h4>
-  <p>Min: {{skillData.min}}</p>
-  <p>Value: {{skillData.value}}</p>
-  <p>Max: {{skillData.max}}</p>
+<details class="debug-section">
+  <summary>▶️ Show Debug Data</summary>
+  <pre>{{json actor.system}}</pre>
+</details>
+
+{{#each actor.system.skills}}
+  <h4 class="skill-name">{{@key}}</h4>
+  <p>Min: {{this.min}}</p>
+  <p>Value: {{this.value}}</p>
+  <p>Max: {{this.max}}</p>
 {{/each}}
     </div>
   </section>

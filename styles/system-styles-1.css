@@ -11,3 +11,7 @@
   .resource, .skills {
     margin: 10px 0;
   }
+  
+  .skill-name {
+    text-transform: capitalize;
+  }

@@ -1,6 +1,12 @@
 Hooks.once("init", function () {
     console.log("RuneScape RPG | Initializing system...");
-  
+    
+    Handlebars.registerHelper("json", function(context) {
+      // Stringify with indentation and wrap in a <pre> so it’s legible
+      const str = JSON.stringify(context, null, 2);
+      return new Handlebars.SafeString(`<pre>${str}</pre>`);
+    });
+
     console.log("RuneScape RPG | Unregistering core...");
     Actors.unregisterSheet("core", ActorSheet);
 
@@ -36,9 +42,12 @@ Hooks.once("init", function () {
   
     getData() {
       console.log("RuneScape RPG | getData called");
-      const data = super.getData();
-      data.Actor = this.Actor; // Ensure actor data is included in the template
-      return data;
+      const baseData = super.getData();
+      return {
+        baseData,
+        actor: this.actor,
+        system: this.actor.system
+      };
     }
   
     activateListeners(html) {

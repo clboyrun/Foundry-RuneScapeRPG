@@ -1,0 +1,12 @@
+.debug-section {
+    margin: 1em 0;
+    border: 1px dashed #666;
+    padding: 0.5em;
+    border-radius: 4px;
+    background: #f9f9f9;
+  }
+  .debug-section summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
