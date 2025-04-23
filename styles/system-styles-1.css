@@ -1,17 +1,66 @@
 .actor-sheet {
-    font-family: 'Arial', sans-serif;
-    padding: 10px;
-  }
-  
-  .sheet-header h1 {
-    font-size: 24px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .resource, .skills {
-    margin: 10px 0;
-  }
-  
-  .skill-name {
-    text-transform: capitalize;
-  }
+  font-family: 'Arial', sans-serif;
+  padding: 10px;
+}
+
+.sheet-header h1 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+}
+
+.resource, .skills {
+  margin: 10px 0;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.skill-card {
+  border: 2px dashed #aaa;
+  border-radius: 12px;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #fff0f8;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ffc8f0;
+}
+
+.skill-card.maxed {
+  border-color: #6f6;
+  background-color: #e0ffe0;
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.skill-info {
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+}
+
+.skill-card:hover::after {
+  content: attr(data-skill);
+  position: absolute;
+  background: #fff8;
+  padding: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.75em;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}

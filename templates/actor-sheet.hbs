@@ -4,20 +4,41 @@
   </header>
 
   <section class="sheet-body">
-    <div class="skills">
     <h3>Skills</h3>
-<!-- Loop through the Skills -->
 <details class="debug-section">
-  <summary>▶️ Show Debug Data</summary>
+  <summary>Show Debug Data</summary>
   <pre>{{json actor.system}}</pre>
 </details>
 
+<!-- Loop through the Skills -->
+    <div class="skills">
 {{#each actor.system.skills}}
-  <h4 class="skill-name">{{@key}}</h4>
-  <p>Min: {{this.min}}</p>
-  <p>Value: {{this.value}}</p>
-  <p>Max: {{this.max}}</p>
+<div class="skill-card {{#if (eq this.value this.max)}}maxed{{/if}}" data-skill="{{@key}}">
+  <div class="skill-icon" style="background-image: url('systems/rsk/icons/skills/{{@key}}.png');"></div>
+  <div class="skill-info">
+    <span class="skill-name">{{capitalize @key}}</span>
+    <br />
+    <span class="skill-values">{{this.value}} / {{this.max}}</span>
+  </div>
+</div>
 {{/each}}
     </div>
   </section>
+
+  <section class="inventory">
+  <h3>Inventory</h3>
+
+  <div class="inventory-grid">
+    {{#each actor.system.inventory as |item index|}}
+      <div class="inventory-slot {{#if item}}occupied{{else}}empty{{/if}}" title="{{item.name}}">
+        {{#if item}}
+          <img src="{{item.icon}}" alt="{{item.name}}" />
+        {{else}}
+          <span class="empty-slot">+</span>
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+</section>
+
 </form>
