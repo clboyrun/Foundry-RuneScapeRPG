@@ -26,7 +26,7 @@ Hooks.once("init", function () {
   class RuneScapeActorSheet extends ActorSheet {
     static get defaultOptions() {
       console.log("RuneScape RPG | Generating default...");
-      return mergeObject(super.defaultOptions, {
+      return foundry.utils.mergeObject(super.defaultOptions, {
         classes: ["rsk", "sheet", "character", "actor"],
         template: "systems/rsk/templates/actor-sheet.hbs",
         width: 600,

@@ -8,7 +8,7 @@
 <h3>Skills</h3>
 
 <!-- Loop through the Skills -->
-{{#each actor.data.templates.resources.skills as |skill skillData|}}
+{{#each actor.system.templates.resources.skills as |skill skillData|}}
   <h4>{{capitalize skill}}</h4>
   <p>Min: {{skillData.min}}</p>
   <p>Value: {{skillData.value}}</p>
