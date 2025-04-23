@@ -14,6 +14,9 @@
     }
   ],
   "scripts": [
+    "scripts/runescape-item.js",
+    "scripts/runescape-actor.js",
+    "scripts/runescape-actor-sheet.js",
     "scripts/runescape-rpg.js"
   ],
   "esmodules": [
@@ -25,6 +28,15 @@
     "styles/tab-style.css"
   ],
   "packs": [
+    {
+      "name": "spells",
+      "label": "RuneScape Kingdoms: Magic",
+      "system": "rsk",
+      "path": "./packs/spells",
+      "entity": "Item",
+      "type": "Item",
+      "private": false
+    }
   ],
   "languages": [
     {

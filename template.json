@@ -1,150 +1,176 @@
 {
-"Actor": {
-  "types": ["Player Character"],
-  "templates": {
-    "background": {
-      "biography": "",
-      "hairColor": "blue"
-    },
-    "resources": {
-      "health": {
-        "min": 0,
-        "value": 10,
-        "max": 10
+  "Actor": {
+    "types": ["Player Character"],
+    "templates": {
+      "background": {
+        "biography": "",
+        "hairColor": "blue"
       },
-      "skills": {
-        "archaeology": {
-          "min": 1,
-          "value": 1,
-          "max": 10,
-          "functions": "How skilled are you at excavating ancient relics & artefacts.\nWhat you might know of ancient Gielinorian history.\nHow can you identify the origin and nature of a relic."
-        },
-        "attack": {
-          "min": 1,
-          "value": 1,
+      "resources": {
+        "health": {
+          "min": 0,
+          "value": 10,
           "max": 10
         },
-        "cooking": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "crafting": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "defence": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "dungeoneering": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "farming": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "fishing": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "fletching": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "herblore": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "hunting": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "magic": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "mining": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "prayer": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "ranged": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "runecrafting": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "slayer": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "smithing": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "summoning": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "thieving": {
-          "min": 1,
-          "value": 1,
-          "max": 10
-        },
-        "woodcutting": {
-          "min": 1,
-          "value": 1,
-          "max": 10
+        "skills": {
+          "archaeology": {
+            "min": 1,
+            "value": 1,
+            "max": 10,
+            "functions": "How skilled are you at excavating ancient relics & artefacts.\nWhat you might know of ancient Gielinorian history.\nHow can you identify the origin and nature of a relic."
+          },
+          "attack": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "cooking": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "crafting": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "defence": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "dungeoneering": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "farming": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "fishing": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "fletching": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "herblore": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "hunting": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "magic": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "mining": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "prayer": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "ranged": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "runecrafting": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "slayer": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "smithing": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "summoning": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "thieving": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          },
+          "woodcutting": {
+            "min": 1,
+            "value": 1,
+            "max": 10
+          }
         }
+      }
+    },
+    "Player Character": {
+      "templates": ["background", "resources"],
+      "goodness": {
+        "value": 5,
+        "max": 10
       }
     }
   },
-  "Player Character": {
-    "templates": ["background", "resources"],
-    "goodness": {
-      "value": 5,
-      "max": 10
+  "Item": {
+    "types": ["weapon", "spell"],
+    "templates": {
+      "rarity": {
+        "rarity": "Common",
+        "price": 20
+      }
+    },
+    "weapon": {
+      "templates": ["rarity"],
+      "damage": 5
+    },
+    "spell": {
+      "type": "object",
+      "properties": {
+        "cost": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "rune": { "type": "string" },
+              "quantity": { "type": "number" }
+            },
+            "required": ["rune", "quantity"]
+          }
+        },
+        "range": {
+          "type": "object",
+          "properties": {
+            "distance": { "type": "string" },
+            "targets": { "type": "number" },
+            "self": { "type": "boolean" }
+          },
+          "required": ["distance", "targets", "self"]
+        },
+        "damage": { "type": "string" },
+        "effect": { "type": "string" },
+        "description": { "type": "string" },
+        "type": { "type": "string" }
+      },
+      "required": ["cost", "range", "damage", "effect", "description", "type"]
     }
   }
-},
-"Item": {
-  "types": ["weapon", "spell"],
-  "templates": {
-    "rarity": {
-      "rarity": "Common",
-      "price": 20
-    }
-  },
-  "weapon": {
-    "templates": ["rarity"],
-    "damage": 5
-  },
-  "spell": {
-    "templates": ["rarity"],
-    "cost": 2
-  }
-}
 }
