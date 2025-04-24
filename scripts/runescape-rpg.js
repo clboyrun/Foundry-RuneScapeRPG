@@ -14,12 +14,22 @@ Hooks.once("init", function () {
 
   console.log("RuneScape RPG | Unregistering core...");
   Actors.unregisterSheet("core", ActorSheet);
+  Items.unregisterSheet("core", ItemSheet); // Optional: Remove default 
 
   console.log("RuneScape RPG | Registering PC Actor Sheet...");
   Actors.registerSheet("rsk", RuneScapeActorSheet, {
     types: ["Player Character"],
     label: "RuneScape Player",
     makeDefault: true,
+  });
+
+  // Spells
+
+  console.log("RuneScape RPG | Registering Spell Sheet...");
+  Items.registerSheet("rsk", RuneScapeSpellSheet, {
+    types: ["spell"],
+    label: "RuneScape Spell",
+    makeDefault: true
   });
 
   CONFIG.Actor.documentClass = RuneScapeActor;

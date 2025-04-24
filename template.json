@@ -168,7 +168,7 @@
         "damage": { "type": "string" },
         "effect": { "type": "string" },
         "description": { "type": "string" },
-        "type": { "type": "string" }
+        "stype": { "type": "string" }
       },
       "required": ["cost", "range", "damage", "effect", "description", "type"]
     }

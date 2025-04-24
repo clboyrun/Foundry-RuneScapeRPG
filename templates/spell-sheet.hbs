@@ -1,0 +1,30 @@
+<div class="rsk-spell-card">
+  <!-- Icon and Ribbon -->
+  <div class="rsk-header">
+    <img src="{{spell.img}}" class="rsk-icon" />
+    {{log spell}}
+    <div class="rsk-ribbon">Type: {{system.stype}}</div>
+  </div>
+
+  <!-- Description -->
+  <div class="rsk-description">
+    {{system.description}}
+  </div>
+
+  <!-- Rune Cost -->
+  <div class="rsk-runes">
+    {{#each system.cost}}
+    <div class="rsk-rune">
+      <img src="systems/rsk/icons/runes/{{rune}}.png" alt="{{rune}} Rune" />
+      <div class="rsk-rune-quantity">{{quantity}}</div>
+    </div>
+    {{/each}}
+  </div>
+
+  <!-- Details -->
+  <div class="rsk-details">
+    <div><strong>Range:</strong> {{system.range.distance}}, Targets: {{system.range.targets}}, Self: {{#if system.range.self}}Yes{{else}}No{{/if}}</div>
+    <div><strong>Damage:</strong> {{system.damage}}</div>
+    <div><strong>Effect:</strong> {{system.effect}}</div>
+  </div>
+</div>

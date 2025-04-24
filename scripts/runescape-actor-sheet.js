@@ -8,8 +8,8 @@ class RuneScapeActorSheet extends ActorSheet {
       return foundry.utils.mergeObject(super.defaultOptions, {
         classes: ["rsk", "sheet", "character", "actor"],
         template: "systems/rsk/templates/actor-sheet.hbs",
-        width: 600,
-        height: 400,
+        width: 400,
+        height: "auto",
       });
     }
   

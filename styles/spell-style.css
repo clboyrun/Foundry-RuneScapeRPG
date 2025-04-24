@@ -1,0 +1,72 @@
+.rsk-spell-card {
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 12px;
+    background: #1a1a1a;
+    color: #fff;
+    max-width: 400px;
+    font-family: var(--font-primary);
+  }
+  
+  .rsk-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .rsk-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+    border: 2px solid #444;
+    border-radius: 4px;
+  }
+
+  .rsk-ribbon {
+    background: #0a1a33;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .rsk-description {
+    margin: 12px 0;
+    font-style: italic;
+  }
+
+  .rsk-runes {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0;
+  }
+
+  .rsk-rune {
+    position: relative;
+    width: 48px;
+    height: 48px;
+  }
+
+  .rsk-rune img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+
+  .rsk-rune-quantity {
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    box-shadow: 0 0 2px #000;
+  }
+
+  .rsk-details div {
+    margin: 4px 0;
+  }
