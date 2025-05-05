@@ -131,46 +131,37 @@
     }
   },
   "Item": {
-    "types": ["weapon", "spell"],
+    "types": ["spell"],
     "templates": {
-      "rarity": {
-        "rarity": "Common",
-        "price": 20
+      "magic": {
+        "system": {
+          "localizedName": { "type": "string" },
+          "cost": {
+            "items": {
+              "properties": {
+                "rune": { "type": "string" },
+                "quantity": { "type": "number" }
+              }
+            }
+          },
+          "range": {
+              "properties": {
+              "distance": { "type": "string" },
+              "targets": { "type": "number" },
+              "self": { "type": "boolean" }
+            }
+          },
+          "damage": { "type": "string" },
+          "effect": { "type": "string" },
+          "description": { "type": "string" },
+          "spellType": { "type": "string" }
+        },
+        "img": { "type": "string" }
       }
     },
-    "weapon": {
-      "templates": ["rarity"],
-      "damage": 5
-    },
     "spell": {
-      "type": "object",
-      "properties": {
-        "cost": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "rune": { "type": "string" },
-              "quantity": { "type": "number" }
-            },
-            "required": ["rune", "quantity"]
-          }
-        },
-        "range": {
-          "type": "object",
-          "properties": {
-            "distance": { "type": "string" },
-            "targets": { "type": "number" },
-            "self": { "type": "boolean" }
-          },
-          "required": ["distance", "targets", "self"]
-        },
-        "damage": { "type": "string" },
-        "effect": { "type": "string" },
-        "description": { "type": "string" },
-        "stype": { "type": "string" }
-      },
-      "required": ["cost", "range", "damage", "effect", "description", "type"]
+      "templates": ["magic"]
     }
   }
+
 }

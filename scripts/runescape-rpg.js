@@ -23,15 +23,6 @@ Hooks.once("init", function () {
     makeDefault: true,
   });
 
-  // Spells
-
-  console.log("RuneScape RPG | Registering Spell Sheet...");
-  Items.registerSheet("rsk", RuneScapeSpellSheet, {
-    types: ["spell"],
-    label: "RuneScape Spell",
-    makeDefault: true
-  });
-
   CONFIG.Actor.documentClass = RuneScapeActor;
   CONFIG.Item.documentClass = RuneScapeItem;
 });

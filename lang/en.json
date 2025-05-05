@@ -1,4 +1,12 @@
 {
-    "ACTOR.TypeCharacter": "Player Character",
-    "SYSTEM.Name": "RuneScape Kingdoms"
+    "RSK.Actor.Type.Player": "Player Character",
+    "RSK.System.Name": "RuneScape Kingdoms",
+    "RSK.Spell.Type.Utility": "Utility",
+    "RSK.Spell.Distance.Near": "Near",
+    "RSK.Spell.Bind.Name": "Bind",
+    "RSK.Spell.Bind.Description": "A green light rises from your hands, before a red circle opens beneath your enemy's feet and iron-coloured rings bind them.",
+    "RSK.Spell.Bind.Effect": "The target is pinned in place for 1d4+1 turns and cannot move.",
+    "RSK.Spell.Charge.Name": "Charge",
+    "RSK.Spell.Charge.Description": "With a clap of your hands, sorcerous energy spears into your chest imbuing you with power.",
+    "RSK.Spell.Charge.Effect": "All your combat spells gain the Puncture 4 quality for 1d3 turns."
   }

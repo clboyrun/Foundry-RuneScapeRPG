@@ -1,0 +1,51 @@
+{
+    "_id":"charge001",
+    "name":"Charge",
+    "type":"spell",
+    "img":"systems/rsk/icons/spells/charge001.png",
+    "system":
+    {
+        "localizedName": "RSK.Spell.Charge.Name",
+        "cost":
+        [
+            {
+                "rune":"Air",
+                "quantity":3
+            },
+            {
+                "rune":"Fire",
+                "quantity":3
+            },
+            {
+                "rune":"Blood",
+                "quantity":3
+            }
+        ],
+        "range":
+        {
+            "distance":"RSK.Spell.Distance.Near",
+            "targets":1,
+            "self":true
+        },
+        "damage":"n/a",
+        "effect":"RSK.Spell.Charge.Effect",
+        "description":"RSK.Spell.Charge.Description",
+        "spellType":"RSK.Spell.Type.Utility"
+    },
+    "flags":
+    {
+        "rsk":
+        {
+            "applyEffect":true,
+            "effect":
+            [
+                {
+                    "type":"puncture 4",
+                    "duration":"1d3"
+                }
+            ]
+        }
+    },
+    "sort":1,
+    "ownership": { "default":0 }
+}

@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Copy to Foundry",
+        "type": "shell",
+        "command": "node sync-to-foundry.js",
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }, 
+      {
+        "label": "Compile Compendium Packs",
+        "type": "shell",
+        "command": "node sync-packs.js",
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Compile Compendium to Packs",
+      "program": "${workspaceFolder}/sync-packs.js",
+      "preLaunchTask": "Compile Compendium Packs"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Copy System to Foundry",
+      "program": "${workspaceFolder}/sync-to-foundry.js",
+      "preLaunchTask": "Copy to Foundry"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Foundry VTT",
+      "runtimeExecutable": "C:\\Program Files\\Foundry Virtual Tabletop\\Foundry Virtual Tabletop.exe",
+      "args": [
+        "--open",
+        "http://localhost:30000/game?rsk-world&username=gamemaster"
+      ],
+      "console": "internalConsole"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Sync and Launch Foundry",
+      "configurations": [
+        "Compile Compendium to Packs",
+        "Copy System to Foundry",
+        "Launch Foundry VTT"
+      ]
+    }
+  ]
+}

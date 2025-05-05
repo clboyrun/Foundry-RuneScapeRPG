@@ -1,30 +1,38 @@
-<div class="rsk-spell-card">
-  <!-- Icon and Ribbon -->
-  <div class="rsk-header">
-    <img src="{{spell.img}}" class="rsk-icon" />
-    {{log spell}}
-    <div class="rsk-ribbon">Type: {{system.stype}}</div>
+<div class="spell-sheet">
+
+  <!-- Top Row -->
+  <div class="spell-header">
+    <img class="spell-icon" src="{{item.img}}" alt="Spell Icon">
+    <div class="spell-name-type">
+      <div class="spell-name">Name: {{localize system.localizedName}}</div>
+      <div class="spell-type">Type: {{localize system.spellType}}</div>
+    </div>
   </div>
+
+  <!-- Background Gradient -->
+  <div class="spell-background"></div>
 
   <!-- Description -->
-  <div class="rsk-description">
-    {{system.description}}
+  <div class="spell-description">{{localize system.description}}</div>
+
+  <!-- Stats -->
+  <div class="spell-stats">
+    <div><strong>Range:</strong> {{localize system.range.distance}}, Targets: {{system.range.targets}}, Self: {{#if system.range.self}}Yes{{else}}No{{/if}}</div>
+    <div><strong>Damage:</strong> {{system.damage}}</div>
+    <div><strong>Effect:</strong> {{localize system.effect}}</div>
   </div>
 
-  <!-- Rune Cost -->
-  <div class="rsk-runes">
-    {{#each system.cost}}
-    <div class="rsk-rune">
-      <img src="systems/rsk/icons/runes/{{rune}}.png" alt="{{rune}} Rune" />
-      <div class="rsk-rune-quantity">{{quantity}}</div>
+  <!-- Rune Grid -->
+  <div class="spell-rune-grid">
+    {{#each RUNE_IMAGES as |sysRune|}}
+    <div class="rune-row">
+        {{#if (lookup ../system.cost sysRune)}}
+            <img src="{{lookup ../RUNE_IMAGES sysRune}}" alt="{{sysRune}} Rune" class="rune-cell" />
+            <div class="rsk-rune-quantity">{{../system.cost.[sysRune]}}</div>
+        {{else}}
+            <img src="{{lookup ../RUNE_IMAGES sysRune}}" alt="{{sysRune}} Rune" class="rune-cell dimmed" />
+        {{/if}}
     </div>
     {{/each}}
-  </div>
-
-  <!-- Details -->
-  <div class="rsk-details">
-    <div><strong>Range:</strong> {{system.range.distance}}, Targets: {{system.range.targets}}, Self: {{#if system.range.self}}Yes{{else}}No{{/if}}</div>
-    <div><strong>Damage:</strong> {{system.damage}}</div>
-    <div><strong>Effect:</strong> {{system.effect}}</div>
   </div>
 </div>

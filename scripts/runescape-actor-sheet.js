@@ -17,7 +17,6 @@ class RuneScapeActorSheet extends ActorSheet {
       console.log("RuneScape RPG | getData called");
       const baseData = super.getData();
       return {
-        baseData,
         actor: this.actor,
         system: this.actor.system
       };

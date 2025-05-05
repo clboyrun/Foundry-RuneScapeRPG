@@ -1,7 +1,7 @@
 {
   "id": "rsk",
   "title": "Runescape Kingdoms",
-  "description": "A Foundry VTT system for the RuneScape Tabletop RPG, RuneScape Kingdoms.",
+  "description": "A Foundry VTT system for the RuneScape Tabletop RPG, RuneScape Kingdoms. Fan-made by the community.",
   "version": "0.1.1",
   "minimumCoreVersion": "11",
   "compatibleCoreVersion": "11",
@@ -15,6 +15,7 @@
   ],
   "scripts": [
     "scripts/runescape-item.js",
+    "scripts/runescape-item-sheet.js",
     "scripts/runescape-actor.js",
     "scripts/runescape-actor-sheet.js",
     "scripts/runescape-spell-sheet.js",
@@ -26,6 +27,7 @@
     "styles/system-styles-1.css",
     "styles/system-styles-2.css",
     "styles/inventory-style.css",
+    "styles/spell-style.css",
     "styles/tab-style.css"
   ],
   "packs": [
@@ -34,8 +36,8 @@
       "label": "RuneScape Kingdoms: Magic",
       "system": "rsk",
       "path": "./packs/spells.db",
-      "entity": "Item",
       "type": "Item",
+      "document": "Item",
       "private": false
     }
   ],

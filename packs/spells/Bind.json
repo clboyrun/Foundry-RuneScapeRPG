@@ -1,0 +1,51 @@
+{
+    "_id":"bind001",
+    "name":"Bind",
+    "type":"spell",
+    "img":"systems/rsk/icons/spells/bind001.png",
+    "system":
+    {
+        "localizedName": "RSK.Spell.Bind.Name",
+        "cost":
+        [
+            {
+                "rune":"Earth",
+                "quantity":3
+            },
+            {
+                "rune":"Water",
+                "quantity":3
+            },
+            {
+                "rune":"Nature",
+                "quantity":2
+            }
+        ],
+        "range":
+        {
+            "distance":"RSK.Spell.Distance.Near",
+            "targets":1,
+            "self":false
+        },
+        "damage":"n/a",
+        "effect":"RSK.Spell.Bind.Effect",
+        "description":"RSK.Spell.Bind.Description",
+        "spellType":"RSK.Spell.Type.Utility"
+    },
+    "flags":
+    {
+        "rsk":
+        {
+            "applyEffect":true,
+            "effect":
+            [
+                {
+                    "type":"root",
+                    "duration":"1d4+1"
+                }
+            ]
+        }
+    },
+    "sort":0,
+    "ownership": { "default":0 }
+}
